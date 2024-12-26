@@ -1,0 +1,29 @@
+{
+    "scss.lint.unknownAtRules": "ignore",
+    "typescript.tsdk": "node_modules\\typescript\\lib",
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "[vue]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "prettier.configPath": "./.prettierrc",
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "always",
+        "source.fixAll.eslint": "always",
+        "source.organizeImports": "never"
+        // "source.fixAll.stylelint": "always"
+    },
+    "[xml]": {
+        "editor.defaultFormatter": "redhat.vscode-xml"
+    }
+    // "stylelint.validate": ["css", "less", "postcss", "sass", "scss", "vue"]
+}

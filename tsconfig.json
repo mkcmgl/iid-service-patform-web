@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "forceConsistentCasingInFileNames": true,
+        "jsx": "preserve",
+        "target": "ESNext",
+        "module": "ESNext",
+        "moduleResolution": "Node",
+        "skipLibCheck": true,
+        "strict": true,
+        "allowJs": true,
+        "noEmit": true,
+        "resolveJsonModule": true,
+        "allowSyntheticDefaultImports": true,
+        "types": [
+            "./node_modules/element-plus/global",
+            "./node_modules/versa-form/types/global"
+        ],
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["src/*"]
+        }
+    },
+    "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.vue"],
+    "exclude": ["node_modules"]
+}

@@ -1,0 +1,43 @@
+{
+    "root": true,
+    "parser": "vue-eslint-parser",
+    "extends": [
+        "eslint:recommended",
+        "plugin:vue/vue3-essential",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:prettier/recommended"
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "parser": "@typescript-eslint/parser",
+        "sourceType": "module"
+    },
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true
+    },
+    "plugins": ["vue", "@typescript-eslint"],
+    "rules": {
+        "prettier/prettier": [
+            "error",
+            {
+                "printWidth": 80,
+                "tabWidth": 4,
+                "endOfLine": "auto",
+                "useTabs": false,
+                "singleQuote": true,
+                "semi": true,
+                "trailingComma": "none",
+                "arrowParens": "always",
+                "bracketSpacing": true
+            }
+        ],
+        "vue/multi-word-component-names": [
+            "off",
+            {
+                "ignores": ["index"]
+            }
+        ]
+    }
+}

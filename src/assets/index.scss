@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'nprogress/nprogress.css';
+
+/* 移除自动填充样式，autocomplete="new-password" */
+/* 针对 Chrome 和 Safari */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+    -webkit-text-fill-color: #000 !important;
+    caret-color: #000 !important; /* 解决光标颜色问题 */
+    transition: background-color 5000s ease-in-out 0s; /* 延长过渡时间以隐藏背景色变化 */
+}
+
+/* 针对 Firefox */
+input:-moz-autofill-available {
+    background-color: white !important;
+    color: #000 !important;
+}
+
+::-webkit-scrollbar {
+    @apply h-2 w-[7px] -mr-1;
+}
+::-webkit-scrollbar-track {
+    @apply bg-transparent rounded-full;
+    &:hover {
+        @apply bg-slate-400/25;
+    }
+}
+::-webkit-scrollbar-thumb {
+    @apply border border-transparent rounded-full bg-slate-600/50;
+}
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-slate-400;
+}
+.hideable-scrollbar-wrapper {
+    & ::-webkit-scrollbar-thumb {
+        visibility: hidden;
+    }
+    &:hover ::-webkit-scrollbar-thumb {
+        visibility: visible;
+    }
+}
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+    margin: 0pz;
+    appearance: none;
+}
+
+// hide edge input[type="password"] eye
+// https://stackoverflow.com/a/61450596/10519069
+input::-ms-reveal,
+input::-ms-clear {
+    @apply hidden;
+}
+
+.versa-message-box.versa-message-box {
+    .versa-message-box__container {
+        background: unset;
+    }
+}
+
+.versa-modal.versa-modal {
+    .el-dialog__header {
+        height: 50px;
+        padding-bottom: 0;
+        margin-bottom: 16px;
+        background: unset;
+        border-bottom: 1px solid #f4f3f7;
+
+        .el-dialog__title {
+            margin-top: 0;
+        }
+    }
+}
